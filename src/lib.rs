@@ -81,6 +81,7 @@ impl Stats {
 }
 
 pub fn benchmark(iterations_in_benchmark: usize, benchmarks: &[Benchmark]) -> Vec<f64> {
+    println!("Calculating batch size...");
     let batch_size = batch_size(benchmarks);
     println!("batch_size: {}", batch_size);
     let mut stats = vec![Stats::default(); benchmarks.len()];

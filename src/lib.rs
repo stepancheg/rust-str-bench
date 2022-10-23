@@ -1,5 +1,3 @@
-#![feature(bench_black_box)]
-
 mod aligned_writer;
 
 use std::hint;

@@ -6,17 +6,21 @@ use rand::Rng;
 use rust_str_bench::Benchmark;
 
 fn gen_random_strings() -> Vec<String> {
-    let mut rng = rand::thread_rng();
     let mut strings = Vec::new();
     for _ in 0..1_000 {
-        let len = rng.gen_range(0..=30);
-        let mut s = String::new();
-        for _ in 0..len {
-            s.push(rng.gen_range(b'a'..=b'z') as char);
-        }
-        strings.push(s);
+        strings.push(gen_string());
     }
     strings
+}
+
+fn gen_string() -> String {
+    let mut rng = rand::thread_rng();
+    let len = rng.gen_range(0..=30);
+    let mut s = String::new();
+    for _ in 0..len {
+        s.push(rng.gen_range(b'a'..=b'z') as char);
+    }
+    s
 }
 
 #[inline(never)]

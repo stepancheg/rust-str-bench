@@ -133,7 +133,7 @@ fn test_input(input: &Input) {
 
 fn test(inputs: &Inputs) {
     println!("Testing...");
-    for _ in 1..1000 {
+    for _ in 1..100000 {
         let input = &inputs.inputs[rand::thread_rng().gen_range(0..LENGTH)]
             [rand::thread_rng().gen_range(0..2)]
             [rand::thread_rng().gen_range(0..ITERATIONS_IN_BENCHMARK)];

@@ -1,4 +1,5 @@
 mod aligned_writer;
+pub mod random_strings;
 
 use std::hint;
 use std::time::Instant;

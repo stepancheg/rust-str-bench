@@ -9,3 +9,6 @@ edition = "2021"
 rand = "0.8.4"
 memchr = "2.4.1"
 hashbrown = { version = "0.12.3", features = ["raw"] }
+twox-hash = "1.6.3"
+xxhash-rust = { version = "0.8.6", features = ["xxh64", "xxh3"] }
+fnv = "1.0.7"
